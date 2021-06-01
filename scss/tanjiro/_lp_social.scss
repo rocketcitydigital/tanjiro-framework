@@ -1,0 +1,86 @@
+.lp-social{
+
+  .facebook-video-top {
+      position: absolute;
+      z-index: 10;
+      left: 22%;
+      top: 30px;
+      width: 217px;
+      padding: 1rem;
+      background: #FFF;
+      border-radius: 1rem;
+      box-shadow: 0px 3px 14px #888;
+  }
+
+  .light-pink{color: $light-pink;}
+  .kidney-svg{position:relative;z-index:5;max-width:400px;}
+  .kidney{fill-rule:evenodd;clip-rule:evenodd;fill: $pink;}
+  .circle-svg{position:absolute;z-index:1;top:-50px;right:105px; width: 350px;}
+  .yellow-circle{fill-rule:evenodd;clip-rule:evenodd; fill:$yellow;}
+
+  .p2-inner h2:before{background-color: $mint;}
+  .p2-sub-p{color: $mint;}
+
+  .p3{background:#e3e2e3;overflow:hidden;text-align:center;}
+
+  .p4-inner h2:before{background-color: $yellow;}
+  .p4-sub-p{color: $yellow;}
+
+  .p5{background: url(../img/p5-bg.jpg) top center no-repeat;}
+
+  .p6-inner h2:before{background-color: $purple;}
+  .p6-sub-p{color: $purple;}
+
+  .p8{background-image: url('../img/p8-bg-austin.jpg'); }
+  .p8-sub-heading{color: $pink;}
+
+  .facebook-video {display: none; width: 150px; padding: 1rem; background: #FFF; border-radius: 1rem; box-shadow: 0px 3px 14px #888;}
+  .insta-video {display: none; width: 150px; padding: 1rem; background: #FFF; border-radius: 1rem; box-shadow: 0px 3px 14px #888;}
+  .and-or{display: none; padding: 10% .5rem; vertical-align: top;}
+
+
+  @media (min-width: 480px){
+    .circle-svg{right: 130px;}
+  }
+
+  @media (min-width: 600px){
+    .facebook-video,.insta-video,.and-or{display: inline-block;}
+  }
+
+  @media (min-width: 677px){
+    .facebook-video-top{left: 32%;}
+  }
+
+  @media (min-width: 769px){
+    .p8{background-position: 50% 0;}
+    .p6-ani{min-height: auto; img{max-width: 500px;}}
+  }
+
+  @media (min-width: 980px){
+    .circle-svg{right: -30px;}
+    .and-or{ padding: 15% 1rem;}
+    .facebook-video,.insta-video  {width: 200px;}
+  }
+
+  @media (min-width: 1120px){
+    .kidney-svg{top: -30px;}
+    .p5{padding: 4rem 0 8rem 0;}
+  }
+
+  @media (min-width: 1200px){
+    .circle-svg{right: 30px;}
+    .kidney-svg{max-width: 500px;}
+    .facebook-video-top {width: 260px; left: 18%;}
+  }
+
+  @media (min-width: 1400px){
+    .facebook-video,.insta-video  {width: 260px;}
+    .p7{margin-top: 0;}
+  }
+
+  @media (min-width: 1500px){
+    .facebook-video-top{left: 23%;}
+    .and-or{ padding: 12.5% 1rem;}
+  }
+
+}

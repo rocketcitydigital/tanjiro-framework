@@ -31,9 +31,15 @@
 //body *:focus,body *:active{outline: 1px solid $link-hover-color;}
 
 body{
-font-family: 'museo-sans', sans-serif;
-font-weight: 300;
-font-style: normal;
+  font-family: 'museo-sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@media (min-width: 768px){
+  .container-md, .container-sm, .container {
+      max-width: 85%;
+  }
 }
 
 video{max-width: 100%;}

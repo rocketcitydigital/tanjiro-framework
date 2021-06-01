@@ -62,7 +62,7 @@ $(window).on('load', function(){
 
 	if(fbVideo){
 		var src = fbVideo.getAttribute("data-src");
-		if (ss > 980) {
+		if (ss > 600) {
       fbSource.setAttribute('src', src);
   		fbVideo.load();
   		fbVideo.play();
@@ -71,7 +71,7 @@ $(window).on('load', function(){
 
   if(igVideo){
 		var src = igVideo.getAttribute("data-src");
-		if (ss > 980) {
+		if (ss > 600) {
       igSource.setAttribute('src', src);
   		igVideo.load();
   		igVideo.play();

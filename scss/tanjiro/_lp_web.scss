@@ -1,0 +1,36 @@
+.lp-web{
+  .imac{
+    top:0;
+  }
+
+  .p2-inner h2:before{background-color: $yellow;}
+  .p2-sub-p{color: $yellow;}
+  .p2-ani {display: block;padding: 2rem 0 0 0;}
+
+  .p3{
+    text-align: right;
+    background: none;
+    z-index: 1;
+    margin: 0 0 -6rem 0;
+    display: block;
+  }
+
+  @media (min-width: 769px){
+    .p3{margin: 0 0 -9rem 0;}
+  }
+
+  @media (min-width: 980px){
+    .p2-inner{min-height: inherit;padding:20px 30px 40px 80px}
+    .p2-ani img{max-width: 91%;}
+    .p3{margin: 0 0 -12rem 0;}
+  }
+
+  @media (min-width: 1180px){
+    .p2-ani img{max-width: 95%;}
+  }
+
+  @media (min-width: 1400px){
+    .p1-svg{max-width:500px;}
+  }
+
+}
