@@ -1,0 +1,39 @@
+
+/// These items will be read but not visible, even on focus
+.sr-only{position: absolute !important;height: 1px; width: 1px;border: 0; padding: 0;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);}
+
+// These items will be read but not visible, but will be visible on focus
+.sr-skip{
+    position:absolute;left:-9999px;
+    &:active,&:focus{
+        display:block;
+        position:static;
+        left:0;
+        background:transparent;
+        border:1px solid $primary;
+        color:$primary;
+        background: $white;
+        padding: 2px 5px;
+    }
+    @include media-breakpoint-up(lg) {
+      &:active,&:focus{
+        position: absolute;
+        border: 1px solid $white;
+        color: $white;
+        background: $primary;
+        top: 20px;
+        left: 280px;
+      }
+    }
+}
+
+/// Give focused elements an outline for users with contrast disability
+//body *:focus,body *:active{outline: 1px solid $link-hover-color;}
+
+body{
+font-family: 'museo-sans', sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+
+video{max-width: 100%;}

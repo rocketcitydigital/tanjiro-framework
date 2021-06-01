@@ -1,0 +1,213 @@
+
+h1{
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.f-left-50{float:none;}
+.f-right-50{float:none;}
+
+#computerOneVideo{
+  width: 80.5%;
+  position: absolute;
+  top: 113px;
+  left:29px;
+  z-index: 9;
+  background: #FFF;
+  padding-bottom: 18px;
+}
+#computerTwoVideo{
+  width: 80.5%;
+  position: absolute;
+  top: 36px;
+  left:31px;
+  z-index: 9;
+  background: #FFF;
+  padding-bottom: 18px;
+}
+
+.imac{position: absolute; z-index: 10; left: 0; top:80px;}
+.imac2{position: absolute; z-index: 10; left: 0; top:0px;}
+
+@media (min-width: 370px){
+  #computerOneVideo{left:37px;top:119px;}
+}
+
+@media (min-width: 400px){
+  #computerTwoVideo{left:39px;top:45px;}
+}
+
+@media (min-width: 560px){
+  #computerOneVideo{width: 81%;}
+}
+
+@media (min-width: 600px){
+  #computerOneVideo{left:41px;top:126px;}
+  #computerTwoVideo{left:48px;top:56px;}
+}
+
+@media (min-width: 630px){
+  #computerOneVideo{left:43px;top:131px;}
+}
+
+@media (min-width: 677px){
+  #computerOneVideo{left:49px;top:142px;}
+  #computerTwoVideo{left:55px;top:70px;}
+}
+
+@media (min-width: 740px){
+  #computerOneVideo{left:54px;top:147px;}
+}
+
+@media (min-width: 769px){
+  #computerTwoVideo{left:63px;top:80px;}
+}
+
+@media (min-width: 800px){
+  #computerOneVideo{left:60px;top:152px;}
+}
+
+@media (min-width: 860px){
+  #computerOneVideo{left:60px;top:152px;width: 574px;}
+  #computerTwoVideo{width: 574px;top:90px;}
+}
+
+@media (min-width: 980px){
+  #computerOneVideo{left:41px;top:136px;width: 82%;}
+  #computerTwoVideo{left:43px;top:60px;width: 81%;}
+  .f-left-50{float:left;width:50%;}
+  .f-right-50{float:right;width:50%;}
+  .p7 .f-left-50{float:left;width:40%;}
+  .p7 .f-right-50{float:right;width:60%;}
+}
+
+@media (min-width: 1120px){
+  #computerOneVideo{left:45px;}
+  #computerTwoVideo{left:49px;top:65px;}
+}
+
+@media (min-width: 1260px){
+  #computerOneVideo{left: 54px;top:150px;}
+  #computerTwoVideo{left:59px;top:75px;}
+}
+
+@media (min-width: 1340px){
+  #computerOneVideo{top: 160px;}
+}
+
+@media (min-width: 1400px){
+  #computerOneVideo{width: 82%;left:58px;}
+  #computerTwoVideo{top:82px;}
+}
+
+@media (min-width: 1500px){
+  #computerOneVideo{width: 526px;}
+  #computerTwoVideo{top:86px;left:65px;}
+}
+
+
+#form-overlay{
+  z-index: 99995;
+  position: fixed;
+  top:0; left:0;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+#form{
+  z-index: 99999;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+#form fieldset{
+  box-shadow: 0px 0px 6px 6px rgba(0,0,0,.2);
+  width:80%;
+  max-width: 600px;
+  margin:2rem auto 0 auto;
+  background: #FFF;
+  padding: 1.5rem;
+  border-radius: .3rem;
+  border:1px solid #444;
+  position: relative;
+}
+
+.close-form{position: absolute;top:.25rem; right:.25rem;background: transparent;cursor: pointer;padding:.25rem;}
+
+.input-group{padding: 0 0 1.25rem 0;}
+.input-group:last-of-type{padding: 0 0 .2rem 0;}
+.label-col{width: 180px;}
+.input-col{width: calc(100% - 180px);}
+.input-group .label{
+  display:block; color: #424646; font-weight: 400; background: $mint;line-height: 1.8rem;
+  font-size: .8rem; padding: .25rem 0 .25rem .5rem; font-family: bilo, sans-serif; text-transform: uppercase;
+  border-top-left-radius: 3px; border-bottom-left-radius: 3px;
+}
+.input-group input[type="text"],.input-group input[type="email"],.input-group input[type="tel"]{
+  background: #FFF; border: 1px solid #dfdfdf; padding:10px 15px;
+  border-top-right-radius: 3px; border-bottom-right-radius: 3px;
+  width: calc(100% - 32px);font-size: .8rem; display: block; border-radius: 5rem;
+  position: relative; z-index: 10;
+}
+.input-group input[type="text"]:focus,.input-group input[type="email"]:focus,.input-group input[type="tel"]:focus,
+.input-group input[type="text"]:active,.input-group input[type="email"]:active,.input-group input[type="tel"]:active
+{
+  outline:none; border: 1px solid $mint; background: lighten($mint,20%);
+}
+
+/* Screen Reader Only <em> for a11y enhancement */
+.toggle-check span em[class^="tc-"] {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  border: 0; padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.toggle-check span em.tc-on {display: none;}
+.toggle-check label{cursor:pointer;display: inline-block; padding: .5rem;}
+.toggle-check input[type="checkbox"]{vertical-align: middle; margin-right:4rem; appearance:none; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none;}
+.toggle-check input[type="checkbox"] + span {position: relative; vertical-align: middle; line-height: normal; font-size:14px;}
+.toggle-check input[type="checkbox"]:checked + span em.tc-on {display: inline-block;}
+.toggle-check input[type="checkbox"]:checked + span em.tc-off {display: none;}
+.toggle-check input[type="checkbox"] + span:before {
+  content: " "; text-align: center; width: 3.25rem; height: 1.5rem;
+  background-color: #DFE6EB; border: 1px solid $slate;
+  border-radius: 1rem; position: absolute; z-index: 1; top: -.2rem; left: -4rem;
+  transition: background-color .3s;
+}
+.toggle-check input[type="checkbox"]:checked + span:before {border-color: darken($pink,10%); background-color: $pink;}
+.toggle-check input[type="checkbox"] + span:after {
+  content: " "; text-align: center; width: 1.5rem; height: 1.5rem; background-color: #FFF;
+  border-radius: 1rem; position: absolute; z-index: 10; top: -.15rem; left: -3.9rem;
+  box-shadow: 3px 0px 2px #bbb; -moz-box-shadow:none; transition: left .3s;
+}
+.toggle-check input[type="checkbox"]:checked + span:after {
+  left: -2.2rem; box-shadow: -3px 0px 2px darken($pink,10%);
+}
+
+/* Oversized */
+.toggle-check.oversized input[type="checkbox"] + span:before{
+  height:1rem; top:1px; box-shadow:none; border:none;
+}
+.toggle-check.large.oversized input[type="checkbox"] + span:before{
+  height:1.25rem; top:2px;
+}
+.toggle-check.oversized input[type="checkbox"] + span:after{
+  background-color: $slate; box-shadow:none; border:none;
+}
+.toggle-check.oversized input[type="checkbox"]:checked + span:after{
+  background-color: darken($pink,10%);
+}
+
+.toggle-check.secondary.oversized input[type="checkbox"]:checked + span:after{
+  background-color: $slate;box-shadow:none; border:none;
+}
+
+.preloader{display: inline-block;padding: .75rem 0 0 .5rem;}
+.preloader svg{-webkit-animation:spin 4s linear infinite;-moz-animation:spin 4s linear infinite;animation:spin 4s linear infinite;}

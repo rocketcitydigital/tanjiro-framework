@@ -1,0 +1,50 @@
+
+.dragdealer {
+  position: relative;
+  height: 30px;
+  background: $gray-100;
+  background:
+  -webkit-linear-gradient(left, $gray-200 0%, $gray-200 33.3%, lighten($blue,20%) 33.3%, lighten($blue,20%) 66.5%, lighten($mint,20%) 66.5%, lighten($mint,20%) 100%);
+  background:
+  -o-linear-gradient(left, $gray-200 0%, $gray-200 33.3%, lighten($blue,20%) 33.3%, lighten($blue,20%) 66.5%, lighten($mint,20%) 66.5%, lighten($mint,20%) 100%);
+  background:
+  linear-gradient(to right, $gray-200 0%, $gray-200 33.3%, lighten($blue,20%) 33.3%, lighten($blue,20%) 66.5%, lighten($mint,20%) 66.5%, lighten($mint,20%) 100%);
+}
+.dragdealer .handle {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  cursor: pointer;
+}
+.dragdealer .scrub-bar {
+  width: 100px;
+  height: 40px;
+  background: $pink;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 3px rgba(0,0,0,.25);
+}
+.dragdealer .disabled {
+  background: #898989;
+}
+
+.col-moderate{
+  background: lighten($blue,25%);
+}
+
+.col-custom{
+  background: lighten($mint,25%);
+}
+
+.pricer-item{
+  padding: 1rem;
+}
+.pricer-item_tier2,.pricer-item_tier3{
+  opacity: .4;
+  &.active{
+    opacity: 1;
+  }
+}
