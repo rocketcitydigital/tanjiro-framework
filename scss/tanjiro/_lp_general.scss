@@ -1,4 +1,65 @@
+@keyframes MorphyKidney {
+  0%,100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  10% {
+    -webkit-transform: translate(30px, 15px);
+            transform: translate(30px, 15px);
+  }
+  20% {
+    -webkit-transform: translate(60px, 25px);
+            transform: translate(60px, 25px);
+  }
+  30% {
+    -webkit-transform: translate(55px, 37px);
+            transform: translate(55px, 37px);
+  }
+  40% {
+    -webkit-transform: translate(40px, 45px);
+            transform: translate(40px, 45px);
+  }
+  50% {
+    -webkit-transform: translate(20px, 52px);
+            transform: translate(20px, 52px);
+  }
+  60% {
+    -webkit-transform: translate(0px, 40px);
+            transform: translate(0px, 40px);
+  }
+  70% {
+    -webkit-transform: translate(-15px, 30px);
+            transform: translate(-15px, 30px);
+  }
+  80% {
+    -webkit-transform: translate(-30px, 20px);
+            transform: translate(-30px, 20px);
+  }
+  90% {
+    -webkit-transform: translate(-20px, 10px);
+            transform: translate(-20px, 10px);
+  }
+  95% {
+    -webkit-transform: translate(-10px, 5px);
+            transform: translate(-10px, 5px);
+  }
+}
+
+@keyframes MorphyKidney2 {
+  0%,100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translate(-50px, 55px);
+            transform: translate(-50px, 55px);
+  }
+}
+
 .lp-general{
+
+  .morphy{animation: MorphyKidney 13s linear infinite;}
+  .morphy2{animation: MorphyKidney2 9s ease infinite;}
 
   h1{
     font-size: 2rem;

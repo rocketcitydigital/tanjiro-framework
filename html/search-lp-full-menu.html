@@ -17,24 +17,20 @@
 
 <header>
 <div class="rcd-logo">
+  <div class="icon-bar-container"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div>
   <img src="../assets/img/RCD-icon_100px.png" alt="Rocket City Digital" width="60px" height="60px">
 </div>
-<div class="nav-arrow"><i class="bi bi-chevron-compact-down"></i></div>
 <nav>
   <ul>
+    <li><span class="rcd-name">Rocket City Digital</span>
     <li>
-      <a href="" class="nav-icon"><i class="bi bi-award"></i></a>
+      <a href="" class="odd">
+        <span class="nav-icon"><i class="bi bi-award"></i></span>
+      </a>
     </li>
-    <li><span class="nav-icon"><i class="bi bi-chat-text-fill"></i></span></li>
-    <li>
-      <span class="nav-icon"><i class="bi bi-camera"></i></span>
-      <ul>
-        <li><a href="">Photography</a></li>
-        <li><a href="">Videography</a></li>
-        <li><a href="">Photography</a></li>
-      </ul>
-    </li>
-    <li><span class="nav-icon"><i class="bi bi-bar-chart-line-fill"></i></span></li>
+    <li><a href="" class="even"><span class="nav-icon"><i class="bi bi-chat-text-fill"></i></span></a></li>
+    <li><a href="" class="odd"><span class="nav-icon"><i class="bi bi-camera"></i></span></a></li>
+    <li><a href="" class="even"><span class="nav-icon"><i class="bi bi-bar-chart-line-fill"></i></span></a></li>
   </ul>
 </nav>
 </header>
@@ -64,9 +60,9 @@
           </video>
         </div>
 
-        <svg class="p1-svg morphy" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg class="p1-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 612 700" style="enable-background:new 0 0 612 692;" xml:space="preserve">
-        <path class="kidney" d="M537.57,250.27c100.92,125.95-0.07,230.59-145.27,252.16C205.89,530.12,117.96,664.15,45.72,574
+        <path class="kidney morphy" d="M537.57,250.27c100.92,125.95-0.07,230.59-145.27,252.16C205.89,530.12,117.96,664.15,45.72,574
         c-72.24-90.16-31.89-292.85,165.64-392.09C318.23,128.22,465.33,160.12,537.57,250.27z"/>
         </svg>
         <svg class="p2-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -164,7 +160,7 @@
     </div>
     <div class="f-right-50" style="position:relative;">
       <img src="../assets/img/summary.png" alt="" class="summary">
-      <svg class="p7-svg1 morphy2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <svg class="p7-svg1 " version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="-100 0 830 792" xml:space="preserve">
       <style type="text/css">
       .pear{fill:#4bf8ea;}
@@ -175,7 +171,7 @@
       </svg>
       <svg class="p7-svg2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 612 700" xml:space="preserve">
-      <path class="" fill="#68bff1" d="M537.57,250.27c100.92,125.95-0.07,230.59-145.27,252.16C205.89,530.12,117.96,664.15,45.72,574
+      <path class="morphy2" fill="#68bff1" d="M537.57,250.27c100.92,125.95-0.07,230.59-145.27,252.16C205.89,530.12,117.96,664.15,45.72,574
       c-72.24-90.16-31.89-292.85,165.64-392.09C318.23,128.22,465.33,160.12,537.57,250.27z"/>
       </svg>
     </div>
@@ -302,6 +298,8 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="../vendor/tweenmax.js"></script>
 <script src="../build/js/tanjiro.min.js"></script>
 
 </body>

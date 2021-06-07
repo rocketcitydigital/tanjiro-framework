@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RCD Website Price Estimator</title>
+  <link rel="stylesheet" href="https://use.typekit.net/icg6klq.css">
+  <link rel="stylesheet" href="../build/css/tanjiro.css">
+  <!--<link rel="icon" href="/favicon.gif" sizes="32x32" />
+  <link rel="icon" href="/favicon.gif" sizes="192x192" />
+  <link rel="apple-touch-icon" href="../favicon.gif" />
+  <meta name="msapplication-TileImage" content="/favicon.gif" />-->
+
+</head>
+<body>
+
+<a href="https://rocketcitydigital.com" target="_blank" class="rcd-logo">
+  <img src="../assets/img/RCD-icon_100px.png" alt="Rocket City Digital" width="60px" height="60px">
+</a>
+
+<main class="">
+
+  <section class="container">
+    <div class="py-3">
+      <h1>Website Price Estimator</h1>
+      <p>Use our custom website design estimator to tailor your budget with your project needs.</p>
+    </div>
+  </section>
+
+  <section class="container site-price-picker">
+
+    <form>
+
+      <div class="site-price-picker_row">
+        <fieldset class="radios" id="ttl" tabindex="0">
+          <legend>Project Due Date:</legend>
+          <label for="ttl-5" tabindex="0"><input name="ttl" id="ttl-5" type="radio"> <span>5 Days</span></label>
+          <label for="ttl-15" tabindex="0"><input name="ttl" id="ttl-15" type="radio"> <span>15 Days</span></label>
+          <label for="ttl-30" tabindex="0"><input name="ttl" id="ttl-30" type="radio" checked> <span>30 Days</span></label>
+          <label for="ttl-45" tabindex="0"><input name="ttl" id="ttl-45" type="radio"> <span>45+ Days</span></label>
+        </fieldset>
+      </div>
+
+      <div class="site-price-picker_row">
+        <fieldset class="radios" id="price" tabindex="0">
+          <legend>Project Budget:</legend>
+          <label for="price-2" tabindex="0"><input name="price" id="price-2" type="radio" disabled> <span>$2,000</span></label>
+          <label for="price-7" tabindex="0"><input name="price" id="price-7" type="radio" checked> <span>$7,000</span></label>
+          <label for="price-13" tabindex="0"><input name="price" id="price-13" type="radio"> <span>$13,000</span></label>
+          <label for="price-20" tabindex="0"><input name="price" id="price-20" type="radio"> <span>$20,000</span></label>
+        </fieldset>
+      </div>
+
+      <div class="site-price-picker_row">
+        <fieldset class="radios" id="type" tabindex="0">
+          <legend>Project Type:</legend>
+          <label for="type-template" tabindex="0"><input name="type" id="type-template" type="radio"> <span>Template</span></label>
+          <label for="type-template-plus" tabindex="0"><input name="type" id="type-template-plus" type="radio" checked> <span>Template+</span></label>
+          <label for="type-custom" tabindex="0"><input name="type" id="type-custom" type="radio"> <span>Custom Design</span></label>
+          <label for="type-art" tabindex="0"><input name="type" id="type-art" type="radio" disabled> <span>Work of Art</span></label>
+        </fieldset>
+      </div>
+
+    </form>
+
+  </section>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../build/js/tanjiro.min.js"></script>
+
+<script>
+
+$('.radios input[type=radio]').on('change', function(){
+  $('.radios input[type=radio]').prop('disabled', false);
+  //var checked_el = $(this);
+
+  if( $('#ttl-5').prop('checked') || $('#price-2').prop('checked') ){ $('#type-art').prop('disabled', true); $('#type-custom').prop('disabled', true); }
+  if( $('#ttl-15').prop('checked') || $('#price-7').prop('checked') ){ $('#type-art').prop('disabled', true); }
+
+  if( $('#type-custom').prop('checked') ){ $('#ttl-5').prop('disabled', true); $('#price-2').prop('disabled', true); }
+  if( $('#type-art').prop('checked') ){ $('#ttl-5').prop('disabled', true); $('#ttl-15').prop('disabled', true); $('#price-2').prop('disabled', true); $('#price-7').prop('disabled', true);}
+
+});
+
+</script>
+
+</body>
+</html>

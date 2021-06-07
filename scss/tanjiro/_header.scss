@@ -1,0 +1,144 @@
+@keyframes NavArrowBob {
+  0%,100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+  }
+}
+
+header{
+  position: fixed;
+  top:1rem;
+  left: 1rem;
+  z-index: 9999;
+  width: 60px;
+
+  &:hover{
+    .nav-arrow{display: none;}
+    ul{
+      li{
+        &:nth-child(1){
+          margin-top:70px;
+        }
+        &:nth-child(2){
+          margin-top:130px;
+        }
+        &:nth-child(3){
+          margin-top:190px;
+        }
+        &:nth-child(4){
+          margin-top:250px;
+        }
+      }
+    }
+  }
+
+  .rcd-logo{
+    position: absolute;
+    top:0; left: 0;
+    z-index: 999;
+  }
+
+  .nav-arrow {
+    animation: NavArrowBob 4s ease infinite;
+    position: absolute;
+    top: 60px;
+    width: 60px;
+    text-align: center;
+  }
+
+  ul{
+    margin: 0; padding: 0;
+    list-style: none;
+    position: relative;
+    li{
+      position: absolute;
+      transition: margin .2s ease-in;
+      width: 60px;
+      padding: .25rem 0;
+      .nav-icon{
+        width: inherit;
+        display: block;
+        margin:0;
+        padding: .5rem;
+        text-align: center;
+        background-color: rgba($gray-200,.7);
+        color: $gray-800;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all .1s ease-in;
+      }
+      &:nth-child(1){
+        transition-delay: .1s;
+      }
+      &:nth-child(2){
+        transition-delay: .2s;
+      }
+      &:nth-child(3){
+        transition-delay: .3s;
+      }
+      &:nth-child(4){
+        transition-delay: .4s;
+      }
+
+      ul{
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top:4px;
+        left: 100%;
+        width: 230px;
+        padding-left: 1rem;
+
+        li{
+          position: relative;
+          margin-top:0 !important;
+          margin:0;
+          padding: 0;
+          display: block;
+          background-color: $gray-700;
+          width: 100%;
+          a{
+            text-decoration: none;
+            color: $gray-200;
+            display: block;
+            padding: .5rem .75rem;
+            &:hover{
+              background-color: $gray-800;
+              color:$yellow;
+            }
+          }
+          &:first-of-type{
+            &:before{
+                content:'';
+                display:block;
+                width:0;
+                height:0;
+                position:absolute;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-right:10px solid $gray-700;
+                left:-10px;
+                top:10px;
+            }
+          }
+        }
+      }
+
+      &:hover{
+        > ul{
+          visibility: visible;
+        }
+        .nav-icon{
+          background-color: $gray-700;
+          color: $yellow;
+        }
+      }
+
+    }
+  }
+}
