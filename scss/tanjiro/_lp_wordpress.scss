@@ -1,0 +1,22 @@
+.lp-wordpress{
+  .kidney{fill-rule:evenodd;clip-rule:evenodd;fill:#ff5529;}
+  .blue-circle{fill-rule:evenodd;clip-rule:evenodd;fill:#00978b;}
+
+  .big-ta{
+    width: 99%; background-color: #f2f2f2; font-family: monospace;
+    height: 400px; font-size: 10px;
+  }
+
+  .response-section:empty{visibility: hidden;}
+  .response-section{
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #fbfbfb;
+    border: 2px dotted #efefef;
+  }
+
+  @media (min-width: 1200px){
+    .p8{margin-top:5%;}
+  }
+
+}

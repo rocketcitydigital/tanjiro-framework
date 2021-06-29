@@ -8,7 +8,7 @@
 // Color system
 
 $white:    #fff !default;
-$gray-100: #f4f4f4 !default;
+$gray-100: #fbfbfb !default;
 $gray-200: #e8e8e8 !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
@@ -69,7 +69,7 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-$primary:       $brown !default;
+$primary:       $mint !default;
 $secondary:     $yellow !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -251,13 +251,12 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: math.div($spacer, 4),
-  2: math.div($spacer, 2),
-  3: $spacer,
-  4: math.div($spacer, 1.5),
-  5: math.div($spacer, 3),
-  6: math.div($spacer, 4),
-  7: math.div($spacer, 5),
+  1: math.div($spacer, 2),
+  2: $spacer,
+  3: $spacer * 1.5,
+  4: $spacer * 2,
+  5: $spacer * 2.5,
+  6: $spacer * 3,
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -286,10 +285,10 @@ $body-text-align:           null !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+$link-color:                              $blue !default;
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        darken($primary,5%) !default;
+$link-hover-color:                        darken($blue,10%) !default;
 $link-hover-decoration:                   none !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -370,7 +369,7 @@ $border-widths: (
 
 $border-color:                $gray-300 !default;
 
-$border-radius:               0 !default;
+$border-radius:               0.5rem !default;
 $border-radius-sm:            .2rem !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-pill:          50rem !default;
@@ -1009,9 +1008,9 @@ $pagination-transition:              color .15s ease-in-out, background-color .1
 $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               math.div($spacer, 2) !default;
-$card-border-width:                 $border-width !default;
-$card-border-radius:                $border-radius !default;
-$card-border-color:                 rgba($black, .125) !default;
+$card-border-width:                 0 !default;
+$card-border-radius:                .5rem !default;
+$card-border-color:                 transparent !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                math.div($card-spacer-y, 2) !default;
 $card-cap-padding-x:                $card-spacer-x !default;
@@ -1019,7 +1018,7 @@ $card-cap-bg:                       rgba($black, .03) !default;
 $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
-$card-bg:                           $white !default;
+$card-bg:                           $gray-100 !default;
 
 $card-img-overlay-padding:          $spacer !default;
 
@@ -1361,7 +1360,7 @@ $pre-color:                         null !default;
 }**/
 
 @mixin heading-font {
-  font-family: "bilo", sans-serif; font-weight: 700; font-style: normal;
+  font-family: "bilo", sans-serif; font-weight: 700 !important; font-style: normal;
 }
 
 .heading-font{@include heading-font();}

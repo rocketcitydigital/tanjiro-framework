@@ -61,7 +61,7 @@
   .morphy{animation: MorphyKidney 13s linear infinite;}
   .morphy2{animation: MorphyKidney2 9s ease infinite;}
 
-  h1{
+  .lp-title{
     font-size: 2rem;
     line-height: 2rem;
     margin-bottom: 1.5rem;
@@ -91,7 +91,7 @@
   .awards{max-width: 300px;}
 
   .p1{background: url('../img/p1-bg-fade.png') bottom center no-repeat; padding-bottom: 100px;}
-  .p1-copy{position: relative;z-index: 99;}
+  .p1-copy{position: relative;z-index: 99;margin-top: 100px; padding: 2rem 2rem 0 2rem;}
   .p1-copy p{font-size: 1.2rem;line-height: 1.5rem;}
   .p1-feature{text-align: center; position: relative;}
   .p1-svg{position:relative;z-index:5;max-width:230px;margin-top:-10px;margin-left:-40px;}
@@ -227,6 +227,7 @@
     #computerOneVideo{left:49px;top:142px;}
     #computerTwoVideo{left:55px;top:70px;}
     .p6-ani{min-height: 550px;}
+    .p1-copy{margin-top: 0;}
   }
 
   @media (min-width: 740px){
@@ -237,7 +238,7 @@
     #computerOneVideo{left:56px;top:165px;}
     #computerTwoVideo{left:63px;top:80px;}
 
-    h1{font-size: 3rem;line-height: 3rem;}
+    .lp-title{font-size: 3rem;line-height: 3rem;}
     .p4-ani{display:none;}
     .p8{background-size: cover;height: 700px;background-position: 55% 0;}
     .p8-content{padding-left: 48%; padding-top: 60px; padding-right: 2rem;}
@@ -260,7 +261,8 @@
     #computerOneVideo{left:41px;top:136px;width: 82%;}
     #computerTwoVideo{left:43px;top:60px;width: 81%;}
 
-    h1{padding-top:70px;}
+    .lp-pagetitle{padding-top:70px;}
+    .p1-copy{padding: 0;}
     .f-left-50{float:left;width:50%;}
     .f-right-50{float:right;width:50%;}
     .p1-svg{max-width:400px;margin-top:-30px;}
@@ -309,14 +311,13 @@
   }
 
   @media (min-width: 1260px){
-    #computerOneVideo{left: 54px;top:150px;}
+    #computerOneVideo{left:45px;top:150px;}
     #computerTwoVideo{left:59px;top:75px;}
-
     .p1-svg{max-width:500px;margin-top:-50px;}
   }
 
   @media (min-width: 1340px){
-    #computerOneVideo{top: 160px;}
+    #computerOneVideo{left:49px;top: 152px;}
   }
 
   @media (min-width: 1400px){
@@ -346,7 +347,7 @@
   @media (min-width: 1500px){
     #computerOneVideo{width: 514px;}
     #computerTwoVideo{top:86px;left:65px;}
-    h1{padding-top: 100px;}
+    .lp-pagetitle{padding-top: 100px;}
     .container{width: 1300px; margin-left: auto; margin-right: auto;}
     .p4{padding: 3rem 0;}
     .p6-ani{text-align: right;}
@@ -392,7 +393,7 @@
   input[type="text"], input[type="email"], input[type="tel"]{
     background: #FFF; border: 1px solid #dfdfdf; padding:10px 15px;
     border-top-right-radius: 3px; border-bottom-right-radius: 3px;
-    width: calc(100% - 32px);font-size: .8rem; display: block; border-radius: 5rem;
+    width: calc(100% - 10px);font-size: .8rem; display: block; border-radius: 5rem;
     position: relative; z-index: 10;
     &:focus,&:active{
       outline:none; border: 1px solid $mint; background: lighten($mint,20%);

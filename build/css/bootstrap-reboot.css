@@ -18,19 +18,19 @@
 }**/
 .heading-font {
   font-family: "bilo", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   font-style: normal;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: "bilo", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   font-style: normal;
 }
 
 strong {
   font-family: "bilo", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   font-style: normal;
 }
 
@@ -172,7 +172,7 @@ dd {
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0;
 }
 
 b,
@@ -206,11 +206,11 @@ sup {
 }
 
 a {
-  color: #3e1d06;
+  color: #6b93fa;
   text-decoration: underline;
 }
 a:hover {
-  color: #271204;
+  color: #3a6ff8;
   text-decoration: none;
 }
 

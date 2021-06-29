@@ -1,0 +1,16 @@
+@use "sass:math";
+
+.lp-default{
+  min-height: 80vh;
+  margin-top: 80px;
+  @include media-breakpoint-up(md){
+    margin-top: 0;
+  }
+}
+
+.tldr{
+  background-color: lighten($mint,16%);
+  border: 2px dotted $mint;
+  padding: 1rem;
+  border-radius: math.div($border-radius, 2);
+}

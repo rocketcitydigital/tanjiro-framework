@@ -1,0 +1,68 @@
+.lp-testimonial{
+  background: url('../img/p1-bg-fade.png') center 150px no-repeat;
+  margin-top: 80px;
+  @include media-breakpoint-up(md){
+    margin-top: 0;
+  }
+
+  .testimonial-item{
+
+    .testimonial-item_quote{
+      padding: 1rem;
+      background-color: $gray-200;
+      color: $gray-700;
+      border-radius: $border-radius;
+      position: relative;
+
+      &:after{
+        content: " ";
+        display: block;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        background: transparent;
+        border: 30px solid $gray-200;
+        bottom: -55px;
+        right: 40px;
+        border-right-color: transparent !important;
+        border-left-color: transparent !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+
+    .testimonial-item_author{
+      padding:1rem 2rem 1rem 0;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    &.reverse{
+      .testimonial-item_quote:after{
+        right:inherit;
+        left:40px;
+      }
+      .testimonial-item_author{text-align: left;padding:1rem 0 1rem 2rem;}
+    }
+
+    &.secondary{
+      .testimonial-item_quote{
+        background-color: lighten($mint,10%);
+        &:after{
+          border-color: lighten($mint,10%);
+        }
+      }
+    }
+
+    &.slate{
+      margin:2rem 0;
+      .testimonial-item_quote{
+        background-color: lighten($slate,18%);
+        &:after{
+          border-color: lighten($slate,18%);
+        }
+      }
+    }
+
+
+  }
+}
