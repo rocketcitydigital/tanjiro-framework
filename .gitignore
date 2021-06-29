@@ -1,6 +1,6 @@
 .DS_Store
 node_modules/
-assets/videos/
-.mp4
-.webm
-.ogv
+assets/vids/
+*.mp4
+*.webm
+*.ogv
