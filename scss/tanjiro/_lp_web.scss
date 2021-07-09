@@ -3,9 +3,11 @@
     top:0;
   }
 
-  .p2-inner h2:before{background-color: $yellow;}
-  .p2-sub-p{color: $yellow;}
-  .p2-ani {display: block;padding: 2rem 0 0 0;}
+  .p1{background: none; padding-bottom: 0;}
+
+  .p2-inner h2:before{background-color: $purple;}
+  .p2-sub-p{color: $purple;}
+  .p2-ani {display: none;}
 
   .p3{
     text-align: right;
@@ -15,14 +17,38 @@
     display: block;
   }
 
+  .p4-inner h2:before{background-color: $pink;}
+  .p4-sub-p{color: $pink;}
+
+  .p6-ani{min-height: 270px; padding: 6rem 0 4rem 0;}
+  .p6-inner h2{padding: 30px 0 15px 0;}
+  .p6-inner h2:before{background-color: $purple;}
+  .p6-sub-p{color: $purple;}
+
+  .p9{
+    background: #FFF url('../img/web-p9-swoop-bg.png') center -220px no-repeat;
+    padding: 4rem 0 2rem 0;
+  }
+  .p9-inner h2{padding: 30px 0 15px 0;}
+  .p9-inner h2:before{background-color: $orange;}
+  .p9-sub-p{color: $orange;}
+
+
   @media (min-width: 769px){
     .p3{margin: 0 0 -9rem 0;}
+    .p9{background: #FFF url('../img/web-p9-swoop-bg.png') center -160px no-repeat; padding: 5rem 0 2rem 0;}
   }
 
   @media (min-width: 980px){
-    .p2-inner{min-height: inherit;padding:20px 30px 40px 80px}
+    .p2-inner{min-height: inherit;padding:20px 0px 40px 80px}
     .p2-ani img{max-width: 91%;}
-    .p3{margin: 0 0 -12rem 0;}
+    .p3{margin: 0 0 -17rem 0;}
+    .p6-ani{min-height: 300px; padding: 8rem 2rem 0 0;}
+    .p8{margin-top:1rem !important;}
+  }
+
+  @include media-breakpoint-up(lg){
+    .p2-ani{display: block;}
   }
 
   @media (min-width: 1180px){
@@ -30,11 +56,19 @@
   }
 
   @media (min-width: 1200px){
-    .p8{margin-top:6%;}
+    .p6-ani{padding: 8rem 0 0 4rem;}
+    .p9{background: #FFF url('../img/web-p9-swoop-bg.png') center -80px no-repeat;}
   }
 
   @media (min-width: 1400px){
     .p1-svg{max-width:500px;}
+    .p3{margin: 0 0 -23rem 0;}
+    .p7{margin-top:0;}
+    .p9{
+       background-image: url('../img/web-p9-swoop-bg.png');
+       background: #FFF url('../img/web-p9-swoop-bg.png') center -40px no-repeat;
+       padding: 10rem 0 4rem 0;
+     }
   }
 
 }

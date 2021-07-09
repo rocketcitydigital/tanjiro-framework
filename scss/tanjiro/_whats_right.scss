@@ -1,0 +1,59 @@
+.whats-right{
+  background-color: $mint;
+  background-image: url('../img/purple-yellow-circle-bottom-bg.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  .chef-img{display: none;}
+  .whats-right--content{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    text-align: center;
+    .whats-right--content_text{
+      padding: 2rem;
+    }
+  }
+
+  @include media-breakpoint-up(md){
+    background-image: url('../img/purple-yellow-circle-right-side-bg.png');
+    background-position: right center;
+
+    .chef-img{
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left:-60px;
+      z-index: 1;
+    }
+    .whats-right--content{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      text-align: left;
+
+      .whats-right--content_text{
+        max-width: 290px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl){
+    .chef-img{left: 0;}
+    .whats-right--content{
+      margin: 0px 15% 0 0;
+    }
+  }
+
+  @include media-breakpoint-up(xxl){
+    .whats-right--content{
+      margin: 0; justify-content: center;
+    }
+  }
+
+}

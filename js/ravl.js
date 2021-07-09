@@ -1,3 +1,21 @@
+function supportsVideoType(type) {
+  var videoTest;
+
+  // Allow user to create shortcuts, i.e. just "webm"
+  var formats = {
+    ogg: 'video/ogg; codecs="theora"',
+    h264: 'video/mp4; codecs="avc1.42E01E"',
+    webm: 'video/webm; codecs="vp8, vorbis"',
+    vp9: 'video/webm; codecs="vp9"',
+    hls: 'application/x-mpegURL; codecs="avc1.42E01E"'
+  };
+
+  if(!videoTest) {
+    videoTest = document.createElement('video')
+  }
+
+  return videoTest.canPlayType(formats[type] || type);
+}
 
 var circleVideo = document.getElementById("circleVideo");
 var circleSource = document.getElementById("circleSource");

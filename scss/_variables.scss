@@ -90,7 +90,9 @@ $theme-colors: (
   "dark":       $dark,
   "mint":       $mint,
   "blue":       $blue,
-  "pink":       $pink
+  "pink":       $pink,
+  "purple":     $purple,
+  "orange":     $orange
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -619,9 +621,9 @@ $btn-link-hover-color:        $white !default;
 $btn-link-disabled-color:     $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           .5rem !default;
-$btn-border-radius-sm:        .25rem !default;
-$btn-border-radius-lg:        1rem !default;
+$btn-border-radius:           1.5rem !default;
+$btn-border-radius-sm:        1rem !default;
+$btn-border-radius-lg:        2rem !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 

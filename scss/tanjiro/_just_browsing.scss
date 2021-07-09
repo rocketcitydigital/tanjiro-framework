@@ -1,0 +1,68 @@
+.just-browsing{
+  background-color: #ff579a;
+  background-image: url('../img/purple-yellow-circle-bottom-bg.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  .feature-img{display: none;}
+  .just-browsing--content{
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    text-align: center;
+    .just-browsing--content_text{
+      padding: 2rem;
+    }
+  }
+
+  @include media-breakpoint-up(md){
+    background-image: url('../img/purple-yellow-circle-right-side-bg.png');
+    background-position: right center;
+
+    .feature-img{
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left:-120px;
+      z-index: 1;
+    }
+    .just-browsing--content{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .just-browsing--content_text{
+        max-width: 420px;
+        padding: 0 2rem 2rem 3rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    .feature-img{left: -80px;}
+  }
+
+  @include media-breakpoint-up(xl){
+
+    .just-browsing--content{
+      margin: 0px 12% 0 0;
+    }
+  }
+
+  @include media-breakpoint-up(xxl){
+    .just-browsing--content{
+      margin: 0px 18% 0 0;
+    }
+  }
+
+  @media (min-width: 1700px){
+    .just-browsing--content{
+      margin: 0px 25% 0 0;
+    }
+  }
+
+}

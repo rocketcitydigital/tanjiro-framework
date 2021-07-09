@@ -1,3 +1,13 @@
+@keyframes NavArrowBob {
+  0%,100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+  }
+}
 
 /// These items will be read but not visible, even on focus
 .sr-only{position: absolute !important;height: 1px; width: 1px;border: 0; padding: 0;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);}
@@ -29,6 +39,11 @@
 /// Give focused elements an outline for users with contrast disability
 //body *:focus,body *:active{outline: 1px solid $link-hover-color;}
 
+@keyframes FadeOut {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
 body{
   font-family: 'museo-sans', sans-serif;
   font-weight: 300;
@@ -41,17 +56,59 @@ body{
   }
 }
 
-.card{
-  margin-bottom: $spacer;
-}
+.card{margin-bottom: $spacer;}
 
-.bg-funky{
-  background: $white url('../img/funky-lines_half.png') top left repeat;
-
-}
+.bg-funky{background: $white url('../img/funky-lines_half.png') top left repeat;}
 
 video{max-width: 100%;}
 
+.three-d-btn-wrapper{
+  padding-top:3px;
+  .three-d-btn{
+    margin-top: 0;
+    border-bottom: 3px solid transparent;
+    transition: border-width .25s ease-in-out,margin 0.25s ease-in-out;
+    &:hover{
+      margin-top:-3px;
+      border-bottom-width: 6px;
+      &.btn-pink{border-color: darken($pink,20%);background-color: $pink;}
+      &.btn-orange{border-color: darken($orange,20%);background-color: $orange;}
+      &.btn-blue{border-color: #103eb3;background-color: $blue;}
+      &.btn-purple{border-color: darken($purple,20%);background-color: $purple;}
+      &.btn-mint{border-color: darken($mint,20%);background-color: $mint;}
+    }
+  }
+}
+
+
+#homeHeader{
+  line-height: 0;
+  width:100%;
+  background-color: #f84b74;
+  video{width: 100%;}
+}
+
+@media (max-width: 400px){
+  #homeHeader{
+    height: 55vh !important;
+  }
+}
+
+@include media-breakpoint-down(md){
+  #homeHeader{
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    padding-top:4rem;
+    video{
+      position: absolute;
+      top:30px;
+      left:0;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+}
 
 footer{
   margin-top:3rem;
@@ -67,6 +124,90 @@ footer{
       color: $link-hover-color;
     }
   }
+  @media (min-width: 500px){
+    .footer-break{display: none;}
+  }
 }
 
-body.article-body footer{margin-top:0;}
+body.home-body footer,body.article-body footer,body.testimonial-body footer{margin-top:0;}
+
+
+.click-to-change{
+  text-align: center; padding: 2rem 0 1rem; position: relative;
+  small{
+    animation: NavArrowBob 6s ease infinite;
+    position: absolute;
+    top:.5rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.img-swap-strip{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  background-color: $white;
+  box-shadow: 0 0 8px 14px $gray-100;
+  border: 1px solid lighten($gray-200,5%);
+  border-radius: 3rem;
+  li{
+    display: inline-block;
+    flex: 1 1 auto;
+    padding: .5rem;
+    text-align: center;
+    img{
+      cursor: pointer;
+      filter: grayscale(100);
+      mix-blend-mode: multiply;
+      opacity: .7;
+      &:hover, &.img-active{
+        opacity: 1;
+        filter: none;
+        mix-blend-mode: normal;
+      }
+    }
+  }
+}
+
+.cta-pill-wrapper{
+  padding: 2rem 0;
+  text-align: center;
+  .cta-pill{
+    display:inline-block;
+    margin: 0 2rem;
+    background-color:#ea5cca; //bright purple
+    &.ecto{background-color: #a1d052;}
+    border-radius:2.5rem;
+    line-height:2rem;
+    padding:1rem 1.5rem;
+    text-align: center;
+    @media (min-width: 769px){
+      a{margin-top: -6px;}
+    }
+  }
+}
+
+.content-tags{
+  margin: 2rem 0 1rem 0;
+  padding: 0;
+  li{
+    cursor: pointer;
+    transition: all .2s ease;
+    display: inline-block;
+    @include heading-font;
+    background-color: $white;
+    color: $gray-900;
+    padding: .6rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+    border-bottom: 1px solid $gray-300;
+    margin-right: 1rem;
+    box-shadow: 0 7px 6px 2px $gray-200;
+  }
+}

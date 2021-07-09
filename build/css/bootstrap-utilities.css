@@ -305,6 +305,14 @@ strong {
   border-color: #f84b74 !important;
 }
 
+.border-purple {
+  border-color: #bd7ddf !important;
+}
+
+.border-orange {
+  border-color: #ff8624 !important;
+}
+
 .border-white {
   border-color: #fff !important;
 }
@@ -1167,6 +1175,14 @@ strong {
   color: #f84b74 !important;
 }
 
+.text-purple {
+  color: #bd7ddf !important;
+}
+
+.text-orange {
+  color: #ff8624 !important;
+}
+
 .text-white {
   color: #fff !important;
 }
@@ -1249,6 +1265,14 @@ strong {
 
 .bg-pink {
   background-color: #f84b74 !important;
+}
+
+.bg-purple {
+  background-color: #bd7ddf !important;
+}
+
+.bg-orange {
+  background-color: #ff8624 !important;
 }
 
 .bg-body {
