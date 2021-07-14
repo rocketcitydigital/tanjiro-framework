@@ -1,9 +1,41 @@
 .lp-home{
 
+
+  .social-ad-kidney{position: relative;z-index: 5;}
+  .social-ad-circle{position: absolute;z-index: 1; top:0; left:0; width: 500px;}
+
   #ccVideoWrapper,#ccVideoWrapperMobile{
     position: relative;
     min-height: 200px;
   }
+
+  #socialAdWrapper{
+    position: relative;
+    min-height: 450px;
+    video{
+      position: absolute;
+      z-index: 10;
+      left: 14%;
+      top: 20px;
+      width: 217px;
+      padding: 1rem;
+      background: #FFF;
+      border-radius: 1rem;
+      box-shadow: 0px 3px 14px #888;
+    }
+  }
+
+  #socialAdWrapperMobile{
+    text-align: center; padding:2rem 0;
+    video{
+      width:230px;
+      padding: 1rem;
+      background: #FFF;
+      border-radius: 1rem;
+      box-shadow: 0px 3px 14px #888;
+    }
+  }
+
   #ccVideoMask,#ccVideoMaskMobile{
     position:absolute;z-index:9;top:0;left:0;
   }
@@ -25,7 +57,7 @@
   }
 
   @media (min-width: 420px){
-    #ccVideoWrapperMobile{min-height: 300px;}
+    #ccVideoWrapperMobile{min-height: 350px;}
     #ccVideoMobile{top:22%;}
     #search-ad-feature{min-height: 350px;}
     #search-ad-video{top: 58px;}
@@ -41,6 +73,10 @@
     #ccVideoMobile{top:22%;}
   }
 
+  @include media-breakpoint-down(md){
+    .lp-title,p{padding-left:1rem; padding-right: 1rem;}
+  }
+
   @include media-breakpoint-up(md){
     #search-ad-video{left: 36px;top:47px;}
   }
@@ -52,25 +88,29 @@
   @media (min-width: 980px){
     #ccVideo{top:31%;}
     #search-ad-video{left: 45px;top:60px;}
+    .social-ad-circle{width: 400px;}
+    #socialAdWrapper{min-height: 500px;}
   }
 
   @include media-breakpoint-up(lg){
-    #search-ad-feature{.p1-svg,.p2-svg{display:none;}}
+
   }
 
   @media (min-width: 1120px){
-    #ccVideoWrapper{min-height: 400px;}
+    #ccVideoWrapper{min-height: 450px;}
     #ccVideo{top:19%;}
   }
 
   @media (min-width: 1200px){
-    #search-ad-video{left: 57px;top:75px;}
+    #search-ad-video{left: 57px;top:77px;}
     #search-ad-feature{min-height: 450px;}
+    #search-ad-feature{.p1-svg,.p2-svg{display:block;} .p1-svg{margin-left: 60px;}}
+    .social-ad-kidney{width:500px;}
   }
 
   @media (min-width: 1400px){
-    #search-ad-feature{width: 630px;}
-    #search-ad-video{left:67px;top:88px;}
+    #search-ad-feature{width: 630px;float: right;}
+    #search-ad-video{left:67px;top:86px;}
   }
 
   @media (min-width: 1500px){

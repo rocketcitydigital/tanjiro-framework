@@ -169,10 +169,11 @@ header{
   }
 
   @include media-breakpoint-up(md){
-    height: 60px;
+    height: 80px;
     width: 60px;
     top:1rem;
-    left: 1rem;
+    left: inherit;
+    right: 1rem;
     background-color: transparent;
 
     &:hover{
@@ -214,10 +215,10 @@ header{
         }
 
         ul{
-          top:4px;
-          left: 100% !important;
-          right: inherit;
-          padding-left: 1rem;
+          top:1px;
+          right: 100% !important;
+          left: inherit;
+          padding-right: 1rem;
           width: 300px;
 
           li{
@@ -227,7 +228,9 @@ header{
                   border-top: 10px solid transparent;
                   border-bottom: 10px solid transparent;
                   border-right:10px solid $gray-700;
-                  left:-10px !important;
+                  transform: rotate(180deg);
+                  right:-9px !important;
+                  left: inherit;
                   top:10px;
               }
             }

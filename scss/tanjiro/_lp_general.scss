@@ -58,7 +58,7 @@
 
 .lp-general{
 
-  .morphy{animation: MorphyKidney 13s linear infinite;}
+  .morphy{animation: MorphyKidney 19s linear infinite;}
   .morphy2{animation: MorphyKidney2 9s ease infinite;}
 
   .lp-title{
@@ -78,6 +78,10 @@
   .p2-inner,.p4-inner,.p6-inner,.p9-inner,.p11-inner,.p12-inner,.p13-inner,.p14-inner
   {
     padding: 20px 10px 40px 80px;
+  }
+  .p2-sub-p,.p4-sub-p,.p6-sub-p,.p9-sub-p,.p11-sub-p,.p12-sub-p,.p13-sub-p,.p14-sub-p
+  {
+    line-height: 1.2;
   }
 
   .light-pink{color: $light-pink;}
@@ -213,7 +217,7 @@
   }
 
   @media (min-width: 480px){
-    .p2-sub-p,.p4-sub-p,.p6-sub-p,.p7-sub-p{font-size: 1.7rem;line-height: 2rem;}
+    .p2-sub-p,.p4-sub-p,.p6-sub-p,.p7-sub-p,.p9-sub-p,.p11-sub-p,.p12-sub-p,.p13-sub-p,.p14-sub-p{font-size: 1.7rem;line-height: 2rem;}
     .awards{margin-left: -110px;max-width: 400px;}
     .p6-inner{margin-top:-30px;}
   }
@@ -257,21 +261,22 @@
     #computerOneVideo{left:54px;top:147px;}
   }
 
-  @media (max-width: 768px){
-    .mobile-addy-text{text-align: left; padding: 1rem 1rem 1rem 2rem;}
-  }
-
   @media (min-width: 769px){
-    .p1-copy{margin-top: 0;}
     #computerOneVideo{left:56px;top:165px;}
     #computerTwoVideo{left:63px;top:80px;}
+    .p2-sub-p,.p4-sub-p,.p6-sub-p,.p9-sub-p,.p11-sub-p,.p12-sub-p,.p13-sub-p,.p14-sub-p
+    {
+      line-height: 1.5;
+    }
 
     .lp-title{font-size: 3rem;line-height: 3rem;}
+    .p1-copy{margin-top:50px;}
     .p8{background-size: cover;height: 700px;background-position: 55% 0;}
     .p8-content{padding-left: 48%; padding-top: 60px; padding-right: 2rem;}
     .p1-svg{max-width:600px;margin-top:-60px;}
     .p6-ani{min-height: 650px;}
     .p3{margin: 1rem 0 3rem 0;}
+
   }
 
   @media (min-width: 800px){
@@ -318,7 +323,6 @@
   }
 
   @include media-breakpoint-up(lg){
-    .lp-pagetitle{padding-top:70px;}
     .p1-copy{padding: 0;}
     .f-left-50{float:left;width:50%;}
     .f-right-50{float:right;width:50%;}
@@ -385,7 +389,6 @@
   @media (min-width: 1500px){
     #computerOneVideo{left:56px;}
     #computerTwoVideo{top:86px;left:65px;}
-    .lp-pagetitle{padding-top: 100px;}
     .container{width: 1300px; margin-left: auto; margin-right: auto;}
     .p4{padding: 3rem 0;}
     .p6-ani{text-align: right;}
@@ -395,9 +398,6 @@
     .p1-feature{overflow: visible;}
   }
 
-  @media (min-width: 1700px){
-    .p8-content {padding-right: 20%;}
-  }
 
   @media (min-width: 1900px){
     .p9{background-image: url('../img/p9-bg.jpg');}

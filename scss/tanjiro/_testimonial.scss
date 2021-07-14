@@ -49,11 +49,17 @@
 .testimonial{
   background: rgb(243,242,242);
   background: linear-gradient(0deg, rgba(243,242,242,1) 0%, rgba(255,255,255,1) 100%);
-  padding-top:2rem;
+  padding-top: 2rem;
 
   .testimonial-animation{
-    position: absolute;z-index:1;overflow:hidden;height: 100%;width: 100%;
+    position: absolute;z-index:1;height: 100%;width: 100%; overflow: hidden;
   }
+
+  @include media-breakpoint-up(md){
+    overflow: hidden;
+    .testimonial-animation{overflow: visible;}
+  }
+
   .morphy{animation: MorphyKidney 13s linear infinite; fill:$blue;z-index: 5;position: relative;}
   .morphy2{animation: MorphyKidney2 9s ease infinite; fill:$purple;
     position: absolute;
@@ -64,6 +70,7 @@
 
   .testimonial-content{
     position: relative;
+    z-index: 99;
     height: 420px;
     padding-bottom: 3rem;
 
@@ -126,6 +133,7 @@
       }
     }
   }
+
 }
 
 

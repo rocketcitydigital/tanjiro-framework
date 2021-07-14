@@ -58,6 +58,16 @@ $icon-color: #d1d1d1;
 .social-animation {
 	position: relative;
 
+	.social-animation_caption{
+		position: absolute;
+		display: flex;
+    bottom: -3.5rem;
+    left: 40%;
+		font-size: .8rem;
+		transform-style: preserve-3d;
+		transform: rotate(-25deg) skew(25deg);
+	}
+
 	ul {
 		position: relative;
 		display: flex;
