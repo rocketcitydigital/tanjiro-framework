@@ -1362,7 +1362,7 @@ $pre-color:                         null !default;
 }**/
 
 @mixin heading-font {
-  font-family: "bilo", sans-serif; font-weight: 700 !important; font-style: normal;
+  font-family: "bilo", sans-serif; font-weight: 700; font-style: normal;
 }
 
 .heading-font{@include heading-font();}

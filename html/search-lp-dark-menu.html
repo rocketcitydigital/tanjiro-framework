@@ -15,43 +15,78 @@
 </head>
 <body>
 
-<header>
-<div class="rcd-logo">
-  <img src="../assets/img/RCD-icon_100px.png" alt="Rocket City Digital" width="60px" height="60px">
-  <div class="nav-arrow">MENU</div>
-</div>
-
-<nav>
-  <ul>
-    <li>
-      <a href="" class="nav-icon"><i class="bi bi-award"></i></a>
-      <ul>
-        <li><strong>AWARDS</strong></li>
-      </ul>
-    </li>
-    <li>
-      <span class="nav-icon"><i class="bi bi-chat-text-fill"></i></span>
-      <ul>
-        <li><strong>CONTACT</strong></li>
-        <li><a href="">General Contact</a></li>
-        <li><a href="">Custom Quote</a></li>
-      </ul>
-    </li>
-    <li>
-      <span class="nav-icon"><i class="bi bi-camera"></i></span>
-      <ul>
-        <li><strong>SERVICES</strong></li>
-        <li><a href="">Photography</a></li>
-        <li><a href="">Videography</a></li>
-        <li><a href="">Photography</a></li>
-      </ul>
-    </li>
-    <li><span class="nav-icon"><i class="bi bi-bar-chart-line-fill"></i></span></li>
-  </ul>
-</nav>
+<header role="banner">
+<a href="#"><img src="../build/img/blob-logo.png" alt="[[++site_name]]" class="logo"></a>
+<button id="navTrigger" class="icon-bar-container"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
 </header>
 
-<main class="lp-general lp-search" id="main" role="main">
+<nav role="navigation" aria-label="Main">
+  <button id="navClose">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+      <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+    </svg>
+  </button>
+  <div class="clearfix">
+      <div class="navigation">
+        <div class="nav-wrapper">
+          <small>NAVIGATE</small>
+          <ul role="menubar" aria-hidden="false">
+            <li role="menuitem"  aria-haspopup="false">
+              01 - <a href="[[~1]]">Home</a>
+            </li>
+            <li role="menuitem"  aria-haspopup="true">
+              02 - <span>Services</span> <button class="navToggle"></button>
+              <ul>
+                <li><a href="[[~21]]">Branding &amp; Identity</a></li>
+                <li><a href="[[~23]]">Content Creation</a></li>
+                <li><a href="[[~9]]">Web Design &amp; Development</a></li>
+                <li><a href="[[~22]]">SEO</a></li>
+                <li><a href="[[~7]]">Google Ads</a></li>
+                <li><a href="[[~8]]">Social Ads</a></li>
+              </ul>
+            </li>
+            <li role="menuitem"  aria-haspopup="true">
+              03 - <a href="[[~6]]">About</a> <button class="navToggle"></button>
+              <ul>
+                <li><a href="[[~13]]">Awards &amp; Recognition</a></li>
+                <li><a href="[[~12]]">Testimonials</a></li>
+              </ul>
+            </li>
+            <li role="menuitem"  aria-haspopup="false">
+              04 - <a href="[[~5]]">Contact</a>
+            </li>
+            <li role="menuitem"  aria-haspopup="false">
+              05 - <a href="[[~11]]">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-info">
+        <div class="nav-wrapper">
+          <small>OFFICES</small>
+          <ul>
+            <li>
+              <span>Huntsville</span><br>
+              1300 Meridian St N<br>
+              Suite 300<br>
+              Huntsville, AL 35801<br>
+              256-398-6578<br>
+              info@rocketcitydigital.com
+            </li>
+          </ul>
+          <div class="social-icons pt-2">
+            <a href="https://www.facebook.com/rocketcitydigital/" target="_blank"><svg fill="currentColor" width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg><span class="sr-only">facebook</span></a> &nbsp;
+            <a href="https://www.instagram.com/rocketcitydigital/?hl=en" target="_blank"><svg fill="currentColor" height="15" width="15" viewBox="0 0 511 511.9" xmlns="http://www.w3.org/2000/svg"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/></svg><span class="sr-only">Instagram</span></a> &nbsp;
+            <a href="https://www.linkedin.com/company/rocket-city-digital" target="_blank"><svg fill="currentColor" height="15" width="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/><path d="m.396 7.977h4.976v16.023h-4.976z"/><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"/></svg><span class="sr-only">LinkedIn</span></a>
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+</nav>
+
+<main class="lp-general lp-search">
 <section class="p1">
   <div class="container">
     <div class="clearfix">
@@ -61,9 +96,6 @@
         </h1>
         <p>When customers search Google for a product or service, they are likely ready to make a purchase. Being on the first page is crucial. We ensure you’re there. Everytime.</p>
         <!--<p class="py-3"><button class="btn-blue btn btn-toggle">Let's connect and get started</button></p>-->
-
-        <div class="click-to-change"><small><span>Click to Change</span><br><i class="bi bi-chevron-down"></i></small></div>
-
         <p class="py-2">
           <img src="../assets/img/5-star.png" alt="">
         </p>
@@ -79,9 +111,9 @@
           </video>
         </div>
 
-        <svg class="p1-svg morphy" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg class="p1-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 612 700" style="enable-background:new 0 0 612 692;" xml:space="preserve">
-        <path class="kidney" d="M537.57,250.27c100.92,125.95-0.07,230.59-145.27,252.16C205.89,530.12,117.96,664.15,45.72,574
+        <path class="kidney morphy" d="M537.57,250.27c100.92,125.95-0.07,230.59-145.27,252.16C205.89,530.12,117.96,664.15,45.72,574
         c-72.24-90.16-31.89-292.85,165.64-392.09C318.23,128.22,465.33,160.12,537.57,250.27z"/>
         </svg>
         <svg class="p2-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -179,7 +211,7 @@
     </div>
     <div class="f-right-50" style="position:relative;">
       <img src="../assets/img/summary.png" alt="" class="summary">
-      <svg class="p7-svg1 morphy2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <svg class="p7-svg1 " version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="-100 0 830 792" xml:space="preserve">
       <style type="text/css">
       .pear{fill:#4bf8ea;}
@@ -190,7 +222,7 @@
       </svg>
       <svg class="p7-svg2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 612 700" xml:space="preserve">
-      <path class="" fill="#68bff1" d="M537.57,250.27c100.92,125.95-0.07,230.59-145.27,252.16C205.89,530.12,117.96,664.15,45.72,574
+      <path class="morphy2" fill="#68bff1" d="M537.57,250.27c100.92,125.95-0.07,230.59-145.27,252.16C205.89,530.12,117.96,664.15,45.72,574
       c-72.24-90.16-31.89-292.85,165.64-392.09C318.23,128.22,465.33,160.12,537.57,250.27z"/>
       </svg>
     </div>
@@ -308,15 +340,17 @@
 
 </main>
 
-<footer style="padding:2rem 0; text-align:center;" id="footer">
+<div style="padding:2rem 0; text-align:center;">
   <p style="font-size:.8rem;color:#aaa;padding: 0 1rem;">Copyright &copy; 2021 Rocket City Digital.  All Rights Reserved.<br>
     By using and engaging with this marketing page you agree to<br>cookie usage and private data collection.
     <a style="color:#aaa;" href="https://rocketcitydigital.com" target="_blank">rocketcitydigital.com</a></p>
-</footer>
+</div>
 
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="../vendor/tweenmax.js"></script>
 <script src="../build/js/tanjiro.min.js"></script>
 
 </body>

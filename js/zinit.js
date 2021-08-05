@@ -1,4 +1,18 @@
 
+$('#navTrigger').on('click', function(){
+  $('nav').addClass('active');
+});
+
+$('#navClose').on('click', function(){
+  $('nav').removeClass('active');
+});
+
+$('.navToggle').on('click', function(){
+  $(this).toggleClass('active');
+  $(this).next('ul').slideToggle();
+});
+
+
 $('#imgSwapLogoTwo img').on('click', function(){
   $('#imgSwapLogoTwo img').removeClass('img-active');
   $(this).addClass('img-active');

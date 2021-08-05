@@ -42,11 +42,14 @@
   .tag-ppc{
     &:hover{background-color: $pink;}
   }
-  .tag-video{
+  .tag-marketing{
     &:hover{background-color: $blue;}
   }
   .tag-website{
     &:hover{background-color: $purple;}
+  }
+  .tag-video{
+    &:hover{background-color: $orange;}
   }
 
 }
@@ -119,10 +122,20 @@
   }
 }
 
-.post-card_video{
+.post-card_marketing{
   border-bottom: 2px solid darken($blue,5%);
   .card-title a{
     color: $blue;text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.post-card_video{
+  border-bottom: 2px solid darken($orange,5%);
+  .card-title a{
+    color: $orange;text-decoration: none;
     &:hover{
       text-decoration: underline;
     }
