@@ -53,6 +53,7 @@ nav{
     position: fixed;
     width:100vw;
     height: 100vh;
+    overflow-y: scroll;
     top:0;
     left:0;
     z-index: 99995;
@@ -177,7 +178,7 @@ nav{
   @include media-breakpoint-up(md){
 
     .nav-wrapper{
-      max-width: 500px;
+      max-width: 300px;
       padding:0;
     }
 
@@ -185,12 +186,20 @@ nav{
       float: left;
       width: 50%;
       height: 100%;
-      
+
     }
     .nav-info{
       float: right;
       width: 50%;
       height: 100%;
+
+      ul.hq{
+        float:left;
+        margin-right: 2rem;
+      }
+      ul.az{
+        float:right;
+      }
     }
 
   }
